@@ -1,0 +1,88 @@
+<template>
+        <Transition name="slide-fade">
+        <div class="border border-slate-200 rounded-lg">
+            <div class="inner relative rounded-lg" >
+                <div class="text-sm absolute left-2 top-2 pill rounded-3xl bg-yellow-600 px-2 py-1" v-if="isSponsored">sponsored</div>
+                <NuxtImg class="rounded-t-lg w-full"  src="https://picsum.photos/300/300"/>
+            </div>
+
+            <div class="flex flex-col p-1">
+                <span class="title text-sm font-medium pl-1">Name and model</span>
+                <span class="font-semibold pl-1">
+                    TZS 250,000,000
+                </span>
+            </div>
+
+            <div class="flex flex-col-reverse md:flex-row md:justify-between p-1">
+                <div class="flex items-center p-0">
+                    <IconsLocationIcon class="h-4 w-4" colour="#ca8a04" />
+                    <span class="text-slate-500 text-sm font-medium">Dar-es-salaam</span>
+                </div>
+
+                <span class="text-slate-500 text-sm font-medium">
+                    1 week
+                </span>
+            </div>
+        </div>
+    </Transition>
+</template>
+
+<script setup>
+import { computed } from 'vue';
+
+const props = defineProps({
+    sponsored:{
+        type:Boolean,
+        default:false
+    }
+})
+
+//temporary computed propto randomly make some cards have a "sponsored" label
+const isSponsored = computed(()=>{
+    if(!props.sponsored){
+        const arr = [true, false]
+        let gen = Math.floor(Math.random() * 2);
+        return arr[gen]
+    }else{
+        return true
+    }
+})
+
+</script>
+
+<style scoped>
+/*
+  Enter and leave animations can use different
+  durations and timing functions.
+*/
+.slide-fade-enter-active {
+  transition: all 1s 0.3s ease-out;
+  animation: bounce-in 1s;
+}
+
+.slide-fade-leave-active {
+  transition: all 1s 0.8s cubic-bezier(1, 0.5, 0.8, 1);
+  animation: bounce-in 1s;
+}
+
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  animation: bounce-in 1s;
+  opacity: 0;
+}
+
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+</style>
+
