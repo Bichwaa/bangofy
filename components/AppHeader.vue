@@ -4,7 +4,7 @@
       class="relative lg:hidden"
       :class="{ 'slide-in': openMenu, 'slide-out': !openMenu }" 
       >
-        <SideBar @close="openMenu=false" class=""/>
+        <SideBar @close="openMenu=false" class="bg-white"/>
     </div>
     <div class="flex lg:justify-between p-3 lg:px-24 gap-20 lg:gap-6">
         <IconsMenuIcon class="w-6 h-6 cursor-pointer lg:hidden" @click="openMenu=true"/>
