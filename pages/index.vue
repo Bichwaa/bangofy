@@ -10,34 +10,10 @@
         </Carousel>
       </div>
 
-      <div class="carou2 mt-12">
-        <Carousel class="w-full ">
-          <CarouselContent class="flex">
-            <!-- <transition-group name="slide-fade"> -->
-              <CarouselItem v-for="(val, i) in categoryNames" :key="i" class="mr-2 gap-2 basis-1/3 md:basis-1/4 lg:basis-1/6">
-                <Card class="mx-1 border-0 shadow-none bg-[#E4E9FE] rounded-md p-1">
-                  <CardContent class="p-0 border-0 shadow-none">
-                    <div class="flex flex-col items-center pt-1">
-                      <!-- <div class="grid place-items-center bg-blue-600 rounded-md m-2 p-2">
-                        image
-                      </div> -->
-                      <NuxtImg class=""  src="https://picsum.photos/100/100"/>
-                      <div class="grid place-items-center text-center text-sm font-medium">
-                        {{ val }}
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </CarouselItem>
-            <!-- </transition-group> -->
-          </CarouselContent>
-          <CarouselPrevious class="hidden lg:block" />
-          <CarouselNext class="hidden lg:block" />
-        </Carousel>
-      </div>
+      <CategoryCarousel/>
 
       <h2 class="mt-12 mb-4 text-2xl font-medium px-4">Sponsored Ads</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 px-4 pb-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 px-4 pb-8">
         <!-- <transition-group name="slide-fade"> -->
           <AdCard v-for="i in 9" :key="i" :sponsored="true"/>
         <!-- </transition-group> -->
@@ -64,14 +40,14 @@
       </div>
 
       <h2 class="mt-12 mb-4 text-2xl font-medium px-4">Latest Ads</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 px-4 pb-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 px-4 pb-8">
         <!-- <transition-group name="slide-fade"> -->
           <AdCard v-for="i in 10" :key="i"/>
         <!-- </transition-group> -->
       </div>
 
       <h2 class="mt-12 mb-4 text-2xl font-medium px-4">Blog Posts</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 px-4 pb-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 px-4 pb-8">
         <!-- <transition-group name="slide-fade"> -->
           <BlogCard v-for="i in 5" :key="i"/>
         <!-- </transition-group> -->
@@ -80,15 +56,11 @@
   </template>
 
   <script setup lang="ts">
-  import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel'
-  import {Card} from "@/components/ui/card"
+  import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
+  
 
 
-  const categoryNames :string[] = [
-    'Vehicles', 'Smartphones', 'Electronics', "Men'swear",
-    "Women'swear", "Home", "Health & Beauty", "Kids",
-    "Hobbies & Sports", "Jobs", "Real Estate", "Others",
-    ] 
+
 </script>
 
 <style scoped>

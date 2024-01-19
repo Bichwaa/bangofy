@@ -11,7 +11,7 @@
             <p class="text-sm text-white">Unlock hidden value.  Sell used items in your community and earn extra cash today!</p>
         </div>
 
-        <div class="p-1flex mt-4">
+        <div class="p-1flex mt-4 lg:mt-12">
            <button 
             class="border border-white bg-transparent rounded-md p-2 text-sm font-semibold text-white hover:bg-white hover:text-[#214bf6] duration-300"
             >Jifunze Zaidi</button>

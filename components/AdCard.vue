@@ -2,7 +2,7 @@
         <Transition name="slide-fade">
         <div class="border border-slate-200 rounded-lg">
             <div class="inner relative rounded-lg" >
-                <div class="text-sm absolute left-2 top-2 pill rounded-3xl bg-yellow-600 px-2 py-1" v-if="isSponsored">sponsored</div>
+                <div class="text-sm absolute left-2 top-2 pill rounded-3xl bg-[#F3DF00] px-2 py-1" v-if="isSponsored">sponsored</div>
                 <NuxtImg class="rounded-t-lg w-full"  src="https://picsum.photos/300/300"/>
             </div>
 
@@ -15,7 +15,7 @@
 
             <div class="flex flex-col-reverse md:flex-row md:justify-between p-1">
                 <div class="flex items-center p-0">
-                    <IconsLocationIcon class="h-4 w-4" colour="#ca8a04" />
+                    <IconsLocationIcon class="h-4 w-4" colour="#888b9b" />
                     <span class="text-slate-500 text-sm font-medium">Dar-es-salaam</span>
                 </div>
 
