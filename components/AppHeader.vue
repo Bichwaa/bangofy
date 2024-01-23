@@ -24,7 +24,7 @@
           </div>
 
           <div class="p2 ">
-              <nuxt-link to="#">Register</nuxt-link>
+              <nuxt-link to="/register">Register</nuxt-link>
           </div>
 
           <button class="bg-[#214bf6] rounded-xl lg:rounded-3xl text-white font-medium py-2 lg:px-4">Post AD</button>

@@ -1,7 +1,7 @@
 <template>
-  <div class="grid place-items-center">
+  <div class="grid place-items-center lg:pt-24">
 
-    <h2 class="font-semibold">Create New Account</h2>
+    <h2 class="font-semibold my-4">Create New Account</h2>
     
     <form 
       @submit.prevent="formSubmitted" 
@@ -35,13 +35,21 @@
         </div>
 
         <div class="flex flex-col">
-          <p class="a">Or sign up with</p>
-
+          <div class="grid grid-cols-8 content-center items-center">
+            <hr class="inline border border-slate-300 col-span-2"/>
+            <p class="a col-span-4 text-center">Or sign up with</p>
+            <hr class="inline border border-slate-300 col-span-2"/>
+          </div>
           <div class="flex gap-2">
 
           </div>
-
-          <p>Do you have an account? <nuxt-link to="#" class="text-blue-500 my-2">Resend code</nuxt-link></p>
+          <div class="grid place-items-center">
+            <div class="flex gap-6 my-4">
+              <icons-google-icon  class="w-6 h-6"/>
+              <icons-facebook-icon  class="w-6 h-6"/>
+            </div>
+            <p>Do you have an account? <nuxt-link to="/login" class="text-blue-500 my-2">Login</nuxt-link></p>
+          </div>
         </div>
     </form>
 
