@@ -3,11 +3,11 @@
         <div class="border border-slate-200 rounded-lg">
             <div class="inner relative rounded-lg" >
                 <div class="text-sm absolute left-2 top-2 pill rounded-3xl bg-[#F3DF00] px-2 py-1" v-if="isSponsored">sponsored</div>
-                <NuxtImg class="rounded-t-lg w-full"  src="https://picsum.photos/300/300"/>
+                <NuxtImg class="rounded-t-lg w-full"  src="https://picsum.photos/300/300" @click="openDetails"/>
             </div>
 
             <div class="flex flex-col p-1">
-                <span class="title text-sm font-medium pl-1">Name and model</span>
+                <span class="title text-sm font-medium pl-1" @click="openDetails">Name and model</span>
                 <span class="font-semibold pl-1">
                     TZS 250,000,000
                 </span>
@@ -47,6 +47,16 @@ const isSponsored = computed(()=>{
         return true
     }
 })
+
+const openDetails = async () =>{
+  await navigateTo({
+  path: '/ad-details',
+  // query: {
+  //   page: 1,
+  //   sort: 'asc'
+  // }
+})
+}
 
 </script>
 
