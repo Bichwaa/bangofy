@@ -2,7 +2,7 @@
     <div class="border border-slate-200 rounded-lg">
         <div class="inner relative rounded-lg" >
             <div 
-            class="text-sm absolute left-1/3 bottom-2 pill rounded-3xl bg-[#214BF6] px-2 py-1 text-white font-medium cursor-pointer hover:bg-white hover:text-[#214bf6] duration-300" 
+            class="text-sm absolute left-1/3 bottom-2 pill rounded-3xl bg-[#214BF6] py-2 px-2 md:px-8 text-white font-medium cursor-pointer hover:bg-white hover:text-[#214bf6] duration-300" 
             >Read More</div>
             <NuxtImg class="rounded-t-lg w-full"  src="https://picsum.photos/300/300"/>
         </div>

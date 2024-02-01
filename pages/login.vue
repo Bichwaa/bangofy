@@ -5,7 +5,7 @@
     
     <form 
       @submit.prevent="formSubmitted" 
-      class="form-card bg-slate-200 p-8 rounded-lg">
+      class="form-card bg-[#F5F6F7] p-2 lg:p-16 rounded-lg">
 
         <div class="flex flex-col lg:flex-row gap-8 justify-between py-1">
           <div class="grp flex flex-col ">

@@ -5,7 +5,7 @@
     
     <form 
       @submit.prevent="formSubmitted" 
-      class="form-card bg-slate-200 p-8 rounded-lg">
+      class="form-card bg-[#F5F6F7] p-2 lg:p-8 rounded-lg">
         <div class="flex flex-col lg:flex-row lg:gap-8 lg:justify-between py-2">
           <div class="grp flex flex-col my-2">
             <label for="firstName" class="text-xs font-medium">First Name</label>

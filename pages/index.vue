@@ -3,8 +3,8 @@
       <div class="carou my-6">
         <Carousel class="w-full ">
           <CarouselContent class="">
-            <CarouselItem v-for="i in 2" :key="i" class="grid place-content-center">
-              <NuxtImg src="/img/LP_Banner.png" alt="banner"/>
+            <CarouselItem v-for="i in 2" :key="i" class="flex place-content-center px-0">
+              <NuxtImg src="/img/LP_Banner.png" alt="banner" class="w-full"/>
             </CarouselItem>
           </CarouselContent>
         </Carousel>
@@ -21,7 +21,7 @@
       </div>
 
       <!-- add space  -->
-      <div class="flex flex-col-reverse lg:flex-row lg:mx-auto lg:pl-40 px-4">
+      <div class="flex flex-col-reverse lg:flex-row lg:mx-auto lg:pl-20 px-4">
           <div class="manenoz flex flex-col lg:basis-1/2">
             <h3 class="font-medium text-2xl">
               Unataka kukuza mauzo, au unatafuta bidhaa fulani?
@@ -31,11 +31,11 @@
             </div>
 
             <div class="p-1 grid place-items-center lg:flex mt-4">
-              <button class="border border-[#214BF6] bg-transparent rounded-md p-1 text-sm text-[#214BF6] hover:bg-[#214bf6] hover:text-white duration-300">Jifunze Zaidi</button>
+              <button class="border border-[#214BF6] bg-transparent rounded-md py-2 px-2 md:px-8 text-sm text-[#214BF6] hover:bg-[#214bf6] hover:text-white duration-300">Jifunze Zaidi</button>
             </div>
           </div>
           <div class="picha grid place-items-center">
-            <NuxtImg src="/img/tangazo.png" />
+            <NuxtImg src="/img/tangazo.png" class="lg:w-[500px]"/>
           </div>
       </div>
 
@@ -47,7 +47,7 @@
       </div>
 
       <h2 class="mt-12 mb-4 text-2xl font-medium px-4">Blog Posts</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 px-4 pb-8">
+      <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 px-4 pb-8">
         <!-- <transition-group name="slide-fade"> -->
           <BlogCard v-for="i in 5" :key="i"/>
         <!-- </transition-group> -->

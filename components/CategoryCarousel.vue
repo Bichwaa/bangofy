@@ -3,8 +3,8 @@
         <Carousel :opts="{loop:true}" class="w-full ">
           <CarouselContent class="flex">
             <!-- <transition-group name="slide-fade"> -->
-              <CarouselItem v-for="(val, i) in categoryNames" :key="i" class="mr-2 gap-2 basis-1/3 md:basis-1/4 lg:basis-[10%]">
-                <Card class="mx-1 border-0 shadow-none bg-[#E4E9FE] rounded-md p-1">
+              <CarouselItem v-for="(val, i) in categoryNames" :key="i" class="mr-2 gap-2 basis-[25%] md:basis-[12%] lg:basis-[7%]">
+                <Card class="mx-1 border-0 shadow-none bg-[#E4E9FE] rounded-md p-1 w-[12vh] h-[12vh] flex items-center justify-center">
                   <CardContent class="p-0 border-0 shadow-none">
                     <div class="flex flex-col items-center pt-1">
                       <!-- <div class="grid place-items-center bg-blue-600 rounded-md m-2 p-2">
@@ -20,8 +20,8 @@
               </CarouselItem>
             <!-- </transition-group> -->
           </CarouselContent>
-          <CarouselPrevious class="hidden lg:block" />
-          <CarouselNext class="hidden lg:block" />
+          <!-- <CarouselPrevious class="hidden lg:block" /> -->
+          <!-- <CarouselNext class="hidden lg:block" /> -->
         </Carousel>
       </div>
 </template>
