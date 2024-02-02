@@ -4,6 +4,8 @@
     type="text"  
     placeholder="What are you looking for? " 
     class="w-full focus-visible:outline-none">  
-    <IconsSearchicon class="w-6 h-6 cursor-pointer"/>
+    <NuxtLink to="/search">
+      <IconsSearchicon class="w-6 h-6 cursor-pointer"/>
+    </NuxtLink>
  </div> 
 </template>
