@@ -3,7 +3,7 @@
         <div class="lg:col-span-3">
             <SearchFilters/>
         </div>
-        <div class="lg:col-span-7">
+        <div class="lg:col-span-9 xl:col-span-8">
             <div class="lg:flex lg:-flex-row justify-between px-2">
                 <h3 class="font-semibold text-xl">Vehicles in Dodoma</h3>
                 <div class="drpdwn">
@@ -28,7 +28,7 @@
                 </div>
             </div>
             <div class="py-4">
-                <SearchResult/>
+                <SearchResult v-for="i in 7"/>
             </div>
         </div>
     </div>

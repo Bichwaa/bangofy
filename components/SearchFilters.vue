@@ -1,5 +1,5 @@
 <template> 
-    <div class="parent">
+    <div class="parent p-2">
         <Accordion type="single" class="w-full" collapsible :default-value="defaultValue">
             <AccordionItem v-for="item in accordionItems" :key="item.value" :value="item.value">
             <AccordionTrigger class="p-0">
@@ -12,19 +12,19 @@
             </AccordionTrigger>
             <AccordionContent>
                 <ul v-if="item.title==='Category'">
-                    <li v-for="cat,idx in categoryNames" :key="idx" class="cursor-pointer hover:text-blue-500 duration-300">
+                    <li v-for="cat,idx in categoryNames" :key="idx" class="cursor-pointer hover:text-blue-500 duration-300" @click="item.defaultSelected=cat.name">
                         {{ cat.name }}
                     </li>
                 </ul>
 
                 <ul v-else-if="item.title==='Location'">
-                    <li v-for="mkoa,idx in mikoa" :key="idx" class="cursor-pointer hover:text-blue-500 duration-300">
+                    <li v-for="mkoa,idx in mikoa" :key="idx" class="cursor-pointer hover:text-blue-500 duration-300" @click="item.defaultSelected=mkoa">
                         {{ mkoa}}
                     </li>
                 </ul>
 
                 <ul v-else-if="item.title==='Condition'">
-                    <li v-for="cond,idx in conditions" :key="idx" class="cursor-pointer hover:text-blue-500 duration-300">
+                    <li v-for="cond,idx in conditions" :key="idx" class="cursor-pointer hover:text-blue-500 duration-300" @click="item.defaultSelected=cond">
                         {{ cond}}
                     </li>
                 </ul>
@@ -48,29 +48,32 @@
 </template>
 
 <script setup lang="ts">
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion'
+import {ref} from 'vue'
+
+
 interface Category {
     name: string,
     url: string
 }
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../components/ui/accordion'
 
 const defaultValue = 'item-3'
 
-const accordionItems = [
+const accordionItems = ref([
   { value: 'item-1', title: 'Category', content: 'Yes. It adheres to the WAI-ARIA design pattern.', defaultSelected:"All" },
   { value: 'item-2', title: 'Location', content: 'Yes. It\'s unstyled by default, giving you freedom over the look and feel.', defaultSelected:"Dodoma" },
   { value: 'item-3', title: 'Price', content: 'Yes! You can use the transition prop to configure the animation.', defaultSelected:"" },
   { value: 'item-4', title: 'Condition', content: 'Yes! You can use the transition prop to configure the animation.', defaultSelected:"used" },
-]
+])
 
-const categoryNames: Array<Category>= [
+const categoryNames = ref([
 { name:"Vehicles", url:"/img/vehicles.png"}, { name:"Smartphones", url:"/img/smartphones.png"},
 { name:"Electronics", url:"/img/electronics.png"}, { name:"Mens's fashion", url:"/img/men-fashion.png"},
 { name:"Women's fashion", url:"/img/women-fashion.png"}, { name:"Home", url:"/img/home.png"},
 { name:"Health & beauty", url:"/img/health-beauty.png"}, { name:"Kids", url:"/img/kids.png"},
 { name:"Hobbies & Sports", url:"/img/hobby-sports.png"}, { name:"Jobs", url:"/img/jobs.png"},
 { name:"Real Estate", url:"/img/real-estate.png"}, { name:"Others", url:"/img/others.png"},
-]
+])
 
 const mikoa:string[]= [
   "Arusha", "Dar es Salaam", "Dodoma", "Iringa",

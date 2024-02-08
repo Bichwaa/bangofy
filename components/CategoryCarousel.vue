@@ -3,7 +3,7 @@
         <Carousel :opts="{loop:true}" class="w-full ">
           <CarouselContent class="flex">
             <!-- <transition-group name="slide-fade"> -->
-              <CarouselItem v-for="(val, i) in categoryNames" :key="i" class="mr-2 gap-2 basis-[25%] md:basis-[12%] lg:basis-[7%]">
+              <CarouselItem v-for="(val, i) in categoryNames" :key="i" class="mr-2 gap-2 basis-[31%] md:basis-[19%] lg:basis-[16%] xl:basis-[8%]">
                 <Card class="mx-1 border-0 shadow-none bg-[#E4E9FE] rounded-md p-1 w-[12vh] h-[12vh] flex items-center justify-center">
                   <CardContent class="p-0 border-0 shadow-none">
                     <div class="flex flex-col items-center pt-1">
