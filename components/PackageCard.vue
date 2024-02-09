@@ -1,5 +1,5 @@
 <template>
-  <div class="border  p-4 flex flex-col rounded-md" :class="isActive?'border-[#214bf6]':'border-[#939393]'">
+  <div class="border sm:flex-basis-1/2  p-4 flex flex-col rounded-md" :class="isActive?'border-[#214bf6]':'border-[#939393]'">
     
     <h3 class="text-center text-lg font-medium" :class="isActive?'text-[#214bf6]':'text-[#262626]'">
       {{ title }}

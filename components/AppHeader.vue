@@ -35,7 +35,7 @@
             </div>
           </div>
 
-          <NuxtLink to="/my-account">
+          <NuxtLink to="/post-ad">
             <button class="bg-[#214bf6] rounded-xl lg:rounded-3xl text-white font-medium py-2 lg:px-8">Post AD</button>
           </NuxtLink>
         </div>

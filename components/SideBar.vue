@@ -49,8 +49,10 @@
         <div class="p2 grid place-content-center bg-white">
             <nuxt-link to="/register">Register</nuxt-link>
         </div>
-
-        <button class="bg-[#214bf6] rounded-xl text-white font-medium py-2">Post AD</button>
+        <NuxtLink to="/post-ad">
+            <button class="bg-[#214bf6] rounded-xl text-white font-medium py-2">Post AD</button>
+        </NuxtLink>
+        
   </div>
 </template>
 
