@@ -14,7 +14,7 @@
           <NuxtImg :src="'/img/bangofy-logo.svg'" />
         </nuxt-link>
 
-        <SearchBar class="hidden lg:flex w-8/12"/>
+        <SearchBar class="hidden lg:flex w-8/12" v-if="isLoggedIn"/>
         </div>
 
         <div class="hidden lg:flex items-center gap-4">
@@ -25,12 +25,12 @@
             </NuxtLink>
           </div>
 
-          <div v-else>
-            <div class="p2 grid">
+          <div v-else class="flex gap-2">
+            <div class="grid">
                 <nuxt-link to="/login" class="text-center">Login</nuxt-link>
             </div>
 
-            <div class="p2 ">
+            <div class="">
                 <nuxt-link to="/register">Register</nuxt-link>
             </div>
           </div>
@@ -41,15 +41,20 @@
         </div>
     </div>
     <BreadCrumbs/>
-    <SearchBar class="md:hidden"/>
+    <SearchBar class="md:hidden" v-if="isLoggedIn"/>
   </div>
   </template>
 
 <script setup>
-import {ref} from'vue';
+import {ref, computed} from'vue';
+import {useAuthStore} from '@/stores/auth.store'
 
-const isLoggedIn = ref(true)
+const authStore = useAuthStore()
+// authStore.$state.isloggedIn
+const isLoggedIn = computed(()=>authStore.isloggedIn)
 const openMenu = ref(false)
+
+
 
 </script>
 

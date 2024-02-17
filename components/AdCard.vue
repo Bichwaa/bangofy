@@ -1,6 +1,6 @@
 <template>
         <Transition name="slide-fade">
-        <div class="border border-slate-200 rounded-lg hover:shadow-lg hover:shadow-gray-500 duration-300">
+        <div class="border border-slate-200 rounded-lg hover:shadow-lg hover:shadow- hover:shadow-gray-300 duration-300">
             <div class="inner relative rounded-lg" >
                 <div class="text-sm absolute left-2 top-2 pill rounded-3xl bg-[#F3DF00] px-4 py-2" v-if="isSponsored">sponsored</div>
                 <NuxtImg class="rounded-t-lg w-full cursor-pointer"  src="https://picsum.photos/300/300" @click="openDetails"/>

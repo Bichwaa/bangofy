@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col lg:w-2/3 mx-auto">
+  <div class="flex flex-col lg:w-2/3 mx-auto p-3 lg:p-12">
     <h3 class="font-semibold text-xl p-2 my-2">Post Ad </h3>
-    <form class="border border-[#3e4e707d] rounded-md p-3 flex flex-col mx-2">
+    <form class="border border-[#3e4e707d] rounded-md p-3 lg:p-12 flex flex-col mx-2">
       <h3 class="font-semibold text-xs my-2">Upload images</h3>
       <input type="file" name="images" multiple ref="imgInput" class="hidden" @change="evaluateActive">
       <div id="img-container" class="flex gap-2 overflow-x-scroll ">
@@ -26,15 +26,15 @@
           @click="activeImg=='3rd'?openFileInput():false"
           >
           <IconsImageIcon class="w-24 h-24"   :fill-color="activeImg=='3rd'?'#214BF6':'#64748b '" v-if="fileNumber<3" />
-          <img :src="thirdSource" alt="image here" id="thirdImage" width="100" height="100"  class="rounded-md"   v-if="activeImg!='3rd' && fileNumber==3"/>
+          <img :src="thirdSource" alt="image here" id="thirdImage" width="100" height="100"  class="rounded-md"   v-if="activeImg!='3rd' && fileNumber>=3"/>
         </div>
 
         <div 
           :class="activeImg=='4th'? 'border-2 border-dotted border-[#214bf6] p-4 cursor-pointer':'border-2 border-dotted border-[#939393] p-4'"
           @click="activeImg=='4th'?openFileInput():false"
           >
-          <IconsImageIcon class="w-24 h-24" :fill-color="activeImg=='4th'?'#214BF6':'#64748b '" v-if="fileNumber<5" />
-          <img :src="fourthSource" alt="image here" id="fourthImage" width="100" height="100"  class="rounded-md"   v-else v-if="activeImg!='4th' && fileNumber==4"/>
+          <IconsImageIcon class="w-24 h-24" :fill-color="activeImg=='4th'?'#214BF6':'#64748b '" v-if="fileNumber<4" />
+          <img :src="fourthSource" alt="image here" id="fourthImage" width="100" height="100"  class="rounded-md"   v-else v-if="activeImg!='4th' && fileNumber>=4"/>
         </div>
       </div>
       <div class="col-span-12 md:col-span-6 flex flex-col my-3">
@@ -45,21 +45,21 @@
       <div class="grid grid-cols-12 gap-2 items-center">
         <div class="col-span-12 md:col-span-6 flex flex-col my-1">
           <label for="firstname" class="font-medium pl-1 text-xs mb-1">Main category</label>
-          <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-transparent rounded-md lg:h-8 w-full text-xs py-1 px-2 text-gray-700">
-            <option value="one" class="text-xs text-[#939393]">category 1</option>
-            <option value="two" class="text-xs text-[#939393]">category 2</option>
-            <option value="three" class="text-xs text-[#939393]">category 3</option>
-            <option value="four" class="text-xs text-[#939393]">category 4</option>
+          <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-white rounded-md lg:h-8 w-full text-xs py-1 px-2 text-gray-700">
+            <option value="one" class="text-xs  bg-slate-100">category 1</option>
+            <option value="two" class="text-xs  bg-slate-100">category 2</option>
+            <option value="three" class="text-xs  bg-slate-100">category 3</option>
+            <option value="four" class="text-xs  bg-slate-100">category 4</option>
           </select>
         </div>
 
         <div class="col-span-12 md:col-span-6 flex flex-col my-1">
           <label for="firstname" class="font-medium pl-1 text-xs mb-1">Subcategory</label>
           <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-transparent rounded-md lg:h-8 w-full text-xs py-1 px-2 text-gray-700">
-            <option value="one" class="text-xs text-[#939393]">subcategory 1</option>
-            <option value="two" class="text-xs text-[#939393]">subcategory 2</option>
-            <option value="three" class="text-xs text-[#939393]">subcategory 3</option>
-            <option value="four" class="text-xs text-[#939393]">subcategory 4</option>
+            <option value="one" class="text-xs  bg-slate-100">subcategory 1</option>
+            <option value="two" class="text-xs  bg-slate-100">subcategory 2</option>
+            <option value="three" class="text-xs  bg-slate-100">subcategory 3</option>
+            <option value="four" class="text-xs  bg-slate-100">subcategory 4</option>
           </select>
         </div>
       </div>
@@ -80,7 +80,7 @@
 
       <div class="flex flex-col my-3">
         <label for="description" class="font-medium pl-1 text-xs mb-1">Description</label>
-        <textarea name="description" placeholder="add item description" class=" border border-1 border-[#939393] rounded-md lg:h-8 w-full p-2 text-sm"></textarea>
+        <textarea name="description" placeholder="add item description" rows="8" cols="50" class=" border border-1 border-[#939393] rounded-md w-full p-2 text-sm"></textarea>
       </div>
 
       <div class="flex flex-col my-3">
@@ -193,7 +193,7 @@ function evaluateActive(){
 
 </script>
 
-<style>
+<style scoped>
  /* Hide scrollbar for Chrome, Safari and Opera */
  #img-container::-webkit-scrollbar {
   display: none;
@@ -204,4 +204,9 @@ function evaluateActive(){
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
 } 
+
+/* select option {
+  background: rgba(0, 0, 0, 0.3) !important;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4) !important;
+} */
 </style>

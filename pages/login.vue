@@ -40,6 +40,9 @@
             <p>Don't have an account? <nuxt-link to="/register" class="text-blue-500 my-2">Register</nuxt-link></p>
           </div>
         </div>
+        <div class="grid place-items-center">
+          <button type="submit" class="bg-[#214bf6] rounded-md text-white font-medium py-2 px-6 my-3">Login</button>
+        </div>
     </form>
 
     
@@ -48,9 +51,16 @@
 </template>
 
 <script lang="ts" setup>
+import {useAuthStore} from '@/stores/auth.store'
 
+const router = useRouter()
+const authStore = useAuthStore()
 
-const formSubmitted = ()=> console.log("form submitted")
+const formSubmitted = ()=> {
+  authStore.login()
+  router.push({path:"/"})
+}
+
 
 </script>
 

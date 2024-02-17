@@ -12,6 +12,7 @@
   "devDependencies": {
     "@nuxt/devtools": "^1.0.8",
     "@nuxtjs/tailwindcss": "^6.10.4",
+    "@pinia/nuxt": "^0.5.1",
     "@vueuse/core": "^10.7.2",
     "@vueuse/nuxt": "^10.7.2",
     "nuxt": "^3.9.0",
@@ -23,7 +24,6 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.2.0",
-    "@pinia/nuxt": "^0.5.1",
     "@radix-icons/vue": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",

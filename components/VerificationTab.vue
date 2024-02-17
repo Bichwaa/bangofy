@@ -1,5 +1,5 @@
 <template>
-  <div class="border border-[#3e4e707d] rounded-md p-3">
+  <div class="border border-[#3e4e707d] rounded-md p-3 lg:p-24">
     <div class="flex flex-col">
       <div class="flex flex-col lg:my-3">
         <span class="text-2xl font-semibold">Verification</span>
@@ -22,10 +22,10 @@
           <div class="col-span-12 md:col-span-6 flex flex-col my-1">
             <label for="firstname" class="font-medium pl-1 text-xs mb-1">Document Type</label>
             <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-transparent rounded-md lg:h-8 w-full text-xs py-1 px-2">
-              <option value="volvo" class="text-xs text-[#939393]">national Id</option>
-              <option value="saab" class="text-xs text-[#939393]">voter's Id</option>
-              <option value="mercedes" class="text-xs text-[#939393]">passport</option>
-              <option value="audi" class="text-xs text-[#939393]">driver's license</option>
+              <option value="volvo" class="text-xs bg-slate-100">national Id</option>
+              <option value="saab" class="text-xs bg-slate-100">voter's Id</option>
+              <option value="mercedes" class="text-xs bg-slate-100">passport</option>
+              <option value="audi" class="text-xs bg-slate-100">driver's license</option>
             </select>
           </div>
 

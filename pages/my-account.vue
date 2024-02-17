@@ -30,7 +30,7 @@
         </div>
        </div>
 
-       <div class="flex gap-8 lg:-ml-9 cursor-pointer">
+       <div class="flex gap-8 lg:-ml-9 cursor-pointer" @click="changeLoginState">
           <IconsLogoutIcon class="w-5 h-5 my-1" :current-color="'#262626'"/>
           <span class="text-[#262626]">Log out</span>
         </div>
@@ -53,10 +53,17 @@
 
 <script lang="ts" setup>
 import {ref} from "vue"
+import {useAuthStore} from '@/stores/auth.store'
+
+const authStore = useAuthStore()
 
 type Tab =  "account" | "verification" | "favs"
 const activeTab:Ref<Tab> = ref("account")
 
+
+function changeLoginState(){
+  authStore.logout()
+}
 </script>
 
 <style>
