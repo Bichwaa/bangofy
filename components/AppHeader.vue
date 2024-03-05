@@ -6,7 +6,7 @@
       >
         <SideBar @close="openMenu=false" class="bg-white"/>
     </div>
-    <div class="flex lg:justify-between p-3 lg:px-24 gap-20 lg:gap-6">
+    <div class="flex lg:justify-between p-3 lg:px-24 gap-20 lg:gap-6 shadow-sm">
         <IconsMenuIcon class="w-6 h-6 cursor-pointer lg:hidden" @click="openMenu=true"/>
         
         <div class="flex gap-24 w-9/12">
@@ -14,7 +14,7 @@
           <NuxtImg :src="'/img/bangofy-logo.svg'" />
         </nuxt-link>
 
-        <SearchBar class="hidden lg:flex w-8/12" v-if="isLoggedIn"/>
+        <SearchBar class="hidden lg:flex w-8/12" />
         </div>
 
         <div class="hidden lg:flex items-center gap-4">
@@ -40,7 +40,7 @@
           </NuxtLink>
         </div>
     </div>
-    <BreadCrumbs/>
+    <!-- <BreadCrumbs/> -->
     <SearchBar class="md:hidden" v-if="isLoggedIn"/>
   </div>
   </template>
