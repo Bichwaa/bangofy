@@ -1,12 +1,12 @@
 <template>
-  <div class="flex flex-col lg:w-2/3 mx-auto p-3 lg:p-12">
-    <h3 class="font-semibold text-xl p-2 my-2">Post Ad </h3>
-    <form class="border border-[#3e4e707d] rounded-md p-3 lg:p-12 flex flex-col mx-2">
-      <h3 class="font-semibold text-xs my-2">Upload images</h3>
+  <div class="flex flex-col lg:w-4/5 mx-auto p-3 lg:p-12">
+    <h3 class="font-medium p-2 my-2">Post Ad </h3>
+    <form class="border border-grey rounded-md p- lg:p-16 flex flex-col mx-2">
+      <h3 class="font-semibold text-sm my-2">Upload images</h3>
       <input type="file" name="images" multiple ref="imgInput" class="hidden" @change="evaluateActive">
       <div id="img-container" class="flex gap-2 overflow-x-scroll ">
         <div 
-          :class="activeImg=='1st'? 'border-2 border-dotted border-[#214bf6] p-4 cursor-pointer':'border-2 border-dotted border-[#939393] p-4'"
+          :class="activeImg=='1st'? 'border-2 border-dotted border-[#214bf6] p-4 cursor-pointer':'border-2 border-dotted border-grey p-4'"
           @click="activeImg=='1st'?openFileInput():false"
           >
           <IconsImageIcon class="w-24 h-24" :fill-color="activeImg=='1st'?'#214BF6':'#64748b '" v-if=" activeImg=='1st' && fileNumber==0"/>
@@ -14,7 +14,7 @@
         </div>
 
         <div 
-          :class="activeImg=='2nd'? 'border-2 border-dotted border-[#214bf6] p-4 cursor-pointer':'border-2 border-dotted border-[#939393] p-4'"
+          :class="activeImg=='2nd'? 'border-2 border-dotted border-[#214bf6] p-4 cursor-pointer':'border-2 border-dotted border-grey p-4'"
           @click="activeImg=='2nd'?openFileInput():false"
           >
           <IconsImageIcon class="w-24 h-24" :fill-color="activeImg=='2nd'?'#214BF6':'#64748b '" v-if="fileNumber<2"/>
@@ -22,7 +22,7 @@
         </div>
 
         <div 
-          :class="activeImg=='3rd'? 'border-2 border-dotted border-[#214bf6] p-4 cursor-pointer':'border-2 border-dotted border-[#939393] p-4'"
+          :class="activeImg=='3rd'? 'border-2 border-dotted border-[#214bf6] p-4 cursor-pointer':'border-2 border-dotted border-grey p-4'"
           @click="activeImg=='3rd'?openFileInput():false"
           >
           <IconsImageIcon class="w-24 h-24"   :fill-color="activeImg=='3rd'?'#214BF6':'#64748b '" v-if="fileNumber<3" />
@@ -30,88 +30,92 @@
         </div>
 
         <div 
-          :class="activeImg=='4th'? 'border-2 border-dotted border-[#214bf6] p-4 cursor-pointer':'border-2 border-dotted border-[#939393] p-4'"
+          :class="activeImg=='4th'? 'border-2 border-dotted border-[#214bf6] p-4 cursor-pointer':'border-2 border-dotted border-grey p-4'"
           @click="activeImg=='4th'?openFileInput():false"
           >
           <IconsImageIcon class="w-24 h-24" :fill-color="activeImg=='4th'?'#214BF6':'#64748b '" v-if="fileNumber<4" />
           <img :src="fourthSource" alt="image here" id="fourthImage" width="100" height="100"  class="rounded-md"   v-else v-if="activeImg!='4th' && fileNumber>=4"/>
         </div>
       </div>
-      <div class="col-span-12 md:col-span-6 flex flex-col my-3">
-        <label for="title" class="font-medium pl-1 text-xs mb-1">Title</label>
-        <input type="text" name="title" class=" border border-1 border-[#939393] rounded-md lg:h-8 w-full">
+      <div class="col-span-12 md:col-span-6 flex flex-col my-4">
+        <label for="title" class="font-medium pl-1 text-sm mb-2">Title</label>
+        <input type="text" name="title" class=" border border-1 border-grey rounded-md lg:h-12
+         w-full">
       </div>
 
-      <div class="grid grid-cols-12 gap-2 items-center">
+      <div class="grid grid-cols-12 gap-2 items-center my-4">
         <div class="col-span-12 md:col-span-6 flex flex-col my-1">
-          <label for="firstname" class="font-medium pl-1 text-xs mb-1">Main category</label>
-          <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-white rounded-md lg:h-8 w-full text-xs py-1 px-2 text-grey">
-            <option value="one" class="text-xs  bg-slate-100">category 1</option>
-            <option value="two" class="text-xs  bg-slate-100">category 2</option>
-            <option value="three" class="text-xs  bg-slate-100">category 3</option>
-            <option value="four" class="text-xs  bg-slate-100">category 4</option>
+          <label for="firstname" class="font-medium pl-1 text-sm mb-2">Main category</label>
+          <select name="cars" id="cars" class=" border border-1 border-grey bg-white rounded-md lg:h-12
+           w-full text-sm py-1 px-2 text-grey">
+            <option value="one" class="text-sm  bg-slate-100">category 1</option>
+            <option value="two" class="text-sm  bg-slate-100">category 2</option>
+            <option value="three" class="text-sm  bg-slate-100">category 3</option>
+            <option value="four" class="text-sm  bg-slate-100">category 4</option>
           </select>
         </div>
 
         <div class="col-span-12 md:col-span-6 flex flex-col my-1">
-          <label for="firstname" class="font-medium pl-1 text-xs mb-1">Subcategory</label>
-          <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-transparent rounded-md lg:h-8 w-full text-xs py-1 px-2 text-grey">
-            <option value="one" class="text-xs  bg-slate-100">subcategory 1</option>
-            <option value="two" class="text-xs  bg-slate-100">subcategory 2</option>
-            <option value="three" class="text-xs  bg-slate-100">subcategory 3</option>
-            <option value="four" class="text-xs  bg-slate-100">subcategory 4</option>
+          <label for="firstname" class="font-medium pl-1 text-sm mb-2">Subcategory</label>
+          <select name="cars" id="cars" class=" border border-1 border-grey bg-transparent rounded-md lg:h-12
+           w-full text-sm py-1 px-2 text-grey">
+            <option value="one" class="text-sm  bg-slate-100">subcategory 1</option>
+            <option value="two" class="text-sm  bg-slate-100">subcategory 2</option>
+            <option value="three" class="text-sm  bg-slate-100">subcategory 3</option>
+            <option value="four" class="text-sm  bg-slate-100">subcategory 4</option>
           </select>
         </div>
       </div>
 
       <div class="flex flex-col my-3">
-        <p for="price" class="font-medium pl-1 text-xs mb-1">Item Condition</p>
+        <p for="price" class="font-medium pl-1 text-sm mb-2">Item Condition</p>
         <div class="flex items-center gap-8">
           <div class="flex gap-2">
-          <input type="radio" checked id="html" name="condition" value="New" class=" border border-1 border-[#939393]">
+          <input type="radio" checked id="html" name="condition" value="New" class=" border border-1 border-grey">
           <label for="html">New</label>
         </div>
         <div class="flex gap-2">
-          <input type="radio" id="html" name="condition" value="New" class=" border border-1 border-[#939393]">
+          <input type="radio" id="html" name="condition" value="New" class=" border border-1 border-grey">
           <label for="html">Used</label>
         </div>
         </div>
       </div>
 
       <div class="flex flex-col my-3">
-        <label for="description" class="font-medium pl-1 text-xs mb-1">Description</label>
-        <textarea name="description" placeholder="add item description" rows="8" cols="50" class=" border border-1 border-[#939393] rounded-md w-full p-2 text-sm"></textarea>
+        <label for="description" class="font-medium pl-1 text-sm mb-2">Description</label>
+        <textarea name="description" placeholder="add item description" rows="8" cols="50" class=" border border-1 border-grey rounded-md w-full p-2 text-sm"></textarea>
       </div>
 
       <div class="flex flex-col my-3">
-        <label for="price" class="font-medium pl-1 text-xs mb-1">Price</label>
-        <input type="text" name="price" class=" border border-1 border-[#939393] rounded-md lg:h-8 w-full">
+        <label for="price" class="font-medium pl-1 text-sm mb-2">Price</label>
+        <input type="text" name="price" class=" border border-1 border-grey rounded-md lg:h-12
+         w-full">
       </div>
 
       <div class="flex flex-col my-3">
-        <p for="price" class="font-medium pl-1 text-xs mb-1">Negotiable</p>
+        <p for="price" class="font-medium pl-1 text-sm mb-2">Negotiable</p>
         <div class="flex items-center gap-8">
           <div class="flex gap-2">
-          <input type="radio" checked id="html" name="condition" value="New" class=" border border-1 border-[#939393]">
+          <input type="radio" checked id="html" name="condition" value="New" class=" border border-1 border-grey">
           <label for="html">Yes</label>
         </div>
         <div class="flex gap-2">
-          <input type="radio" id="html" name="condition" value="New" class=" border border-1 border-[#939393]">
+          <input type="radio" id="html" name="condition" value="New" class=" border border-1 border-grey">
           <label for="html">No</label>
         </div>
         </div>
       </div>
 
       <div class=" my-3">
-        <p class="font-medium pl-1 text-xs mb-1">Select package</p>
-        <div class="flex flex-col gap-4 md:flex-row md:gap-8 ">
-          <PackageCard/>
-          <PackageCard title="Wholesale"/>
-          <PackageCard title="Supplier" :is-active="true"/>
+        <p class="font-medium pl-1 text-sm mb-2">Select package</p>
+        <div class="flex flex-col gap-4 md:flex-row md:gap-8 lg:justify-between">
+          <PackageCard :selected="selectedTier" @clicked="packageSelected"/>
+          <PackageCard title="Wholesale" :selected="selectedTier" @clicked="packageSelected"/>
+          <PackageCard title="Supplier" :selected="selectedTier" @clicked="packageSelected"/>
         </div>
       </div>
 
-      <button class="rounded-md bg-[#214bf6] w-full text-white py-2 px-4" @click.prevent>Next</button>
+      <button class="rounded-md bg-[#214bf6] w-full text-white py-2 px-4 mt-12" @click.prevent>Next</button>
     </form>
   </div>
 </template>
@@ -129,12 +133,14 @@ const thirdSource = ref("")
 const fourthSource = ref("")
 const activeImg:Ref<ActiveImage> = ref("1st")
 
+const selectedTier = ref("supplier")
+
 function openFileInput(){
     imgInput.value?.click()
 }
 
-function changeActiveImg(to:ActiveImage){
-    activeImg.value = to;
+function packageSelected(e:any){
+  selectedTier.value = e;
 }
 
 function evaluateActive(){

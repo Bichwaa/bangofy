@@ -18,7 +18,7 @@
       <button 
         class="text-xs font-semibold py-2 px-4  rounded-md hover:bg-[#214bf6] hover:text-white hover:border-none duration-300" 
         :class="isActive?'bg-[#214bf6] text-white border-none':'border-[#939393] text-[#3d3c3c] border'"
-        @click.prevent
+        @click.prevent="emits('clicked',title)"
         >{{ isActive?'selected':'Select package' }}</button>
     </div>
 
@@ -26,10 +26,10 @@
 </template>
 
 <script lang="ts" setup>
-import {ref} from 'vue';
+import {computed} from 'vue';
 
 
-defineProps({
+const props = defineProps({
   perks:{
     default: [ "lorem ipsum sijui mengine ni nini", "what is love?", "baby don't hurt me no more", "pure liquid energy, no dash"],
     type: Array
@@ -42,14 +42,17 @@ defineProps({
     default:'TZS 0.0',
     type:String
   },
-   isActive:{
-    default:false,
-    type:Boolean
+   selected:{
+    type:String,
+    default:"supplier" // options are "retail, wholesale & supplier". TODO:You and I know this is shit code
    }
 })
 
 
+const emits = defineEmits(["clicked"])
 
+const isActive = computed(function(){
+  if(props.selected.toLowerCase() === props.title.toLowerCase()){return true}else {return false}})
 
 
 </script>
