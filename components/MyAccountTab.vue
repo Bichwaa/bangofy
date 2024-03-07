@@ -35,7 +35,7 @@
           </div>
         </div>
         <div>
-          <button class="text-grey text-sm font-medium border border-[#26262654] py-2 px-4 rounded-lg transition-all duration-300 hover:border-none hover:text-white hover:bg-[#214BF6]">
+          <button class="text-[#214BF6] text-xs font-medium border border-grey py-2 px-6 rounded-lg transition-all duration-300 hover:border-none hover:text-white hover:bg-[#214BF6]">
             Edit
         </button>
         </div>

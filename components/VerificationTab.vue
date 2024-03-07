@@ -2,26 +2,26 @@
   <div class="border border-[#3e4e707d] rounded-md p-3 lg:p-24">
     <div class="flex flex-col">
       <div class="flex flex-col lg:my-3">
-        <span class="text-2xl font-semibold">Verification</span>
+        <span class="text font-medium">Verification</span>
         <span class="text-xs text-[#939393]">Please upload identification document to verify your account.</span>
       </div>
       <form  class="">
-        <div class="grid grid-cols-12 gap-2 items-center">
+        <div class="grid grid-cols-12 gap-2 items-center my-6">
           <div class="col-span-12 md:col-span-6 flex flex-col my-1">
-            <label for="firstname" class="font-medium pl-1 text-xs mb-1">First Name</label>
-            <input type="text" name="firstname" class=" border border-1 border-[#939393] rounded-md lg:h-8 w-full py-3">
+            <label for="firstname" class="font-medium pl-1 text-xs mb-2">First Name</label>
+            <input type="text" name="firstname" class=" border border-1 border-[#939393] rounded-md lg:h-8 w-full py-5">
           </div>
 
           <div class="col-span-12 md:col-span-6 flex flex-col my-3">
-            <label for="lastname" class="font-medium pl-1 text-xs mb-1">Last Name</label>
-            <input type="text" name="lastname" class=" border border-1 border-[#939393] rounded-md lg:h-8 w-full py-3">
+            <label for="lastname" class="font-medium pl-1 text-xs mb-2">Last Name</label>
+            <input type="text" name="lastname" class=" border border-1 border-[#939393] rounded-md lg:h-8 w-full py-5">
           </div>
         </div>
 
-        <div class="grid grid-cols-12 gap-2 items-center">
+        <div class="grid grid-cols-12 gap-2 items-center my-6">
           <div class="col-span-12 md:col-span-6 flex flex-col my-1">
-            <label for="firstname" class="font-medium pl-1 text-xs mb-1">Document Type</label>
-            <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-transparent rounded-md lg:h-8 w-full text-xs py-1 px-2">
+            <label for="firstname" class="font-medium pl-1 text-xs mb-2">Document Type</label>
+            <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-transparent rounded-md lg:h-8 w-full text-xs py-5 px-4">
               <option value="volvo" class="text-xs bg-slate-100">national Id</option>
               <option value="saab" class="text-xs bg-slate-100">voter's Id</option>
               <option value="mercedes" class="text-xs bg-slate-100">passport</option>
@@ -30,12 +30,12 @@
           </div>
 
           <div class="col-span-12 md:col-span-6 flex flex-col my-3">
-            <label for="docnumber" class="font-medium pl-1 text-xs mb-1">Document Number</label>
-            <input type="text" name="docnumber" class=" border border-1 border-[#939393] rounded-md lg:h-8 w-full py-3">
+            <label for="docnumber" class="font-medium pl-1 text-xs mb-2">Document Number</label>
+            <input type="text" name="docnumber" class=" border border-1 border-[#939393] rounded-md lg:h-8 w-full py-5">
           </div>
         </div>
 
-        <div class="border-[3px] border-dotted border-blue-300 bg-blue-100 rounded-md py-12 px-16 md:px-44 xl:px-80">
+        <div class="border-[3px] border-dotted border-blue-300 bg-blue-100 rounded-md py-12 px-16 md:px-44 xl:px-80 my-12">
           <div class="btn flex gap-8 p-3 justify-center bg-[#214BF6] rounded-md cursor-pointer" 
             @click="uploadClicked"
             v-if="!showSelection"
@@ -50,7 +50,7 @@
             <IconsCloseIcon class="w-6 h-6 cursor-pointer" @click="clearFileInput"/>
           </div>
         </div>
-        <div class="grid place-items-center my-4">
+        <div class="grid place-items-center my-6">
           <button type="submit" class=" flex gap-3 justify-around p-3 items-center bg-[#214BF6] rounded-md cursor-pointer px-12" @click.prevent="true">
             <span class="text-white font-semibold text-xs block">Submit</span>
           </button>

@@ -16,7 +16,7 @@
 
     <div class="my-2 grid place-items-center">
       <button 
-        class="text-xs font-semibold py-2 px-4  rounded-md hover:bg-[#214bf6] hover:text-white hover:border-none duration-300" 
+        class="text-xs font-semibold py-3 px-6  rounded-md hover:bg-[#214bf6] hover:text-white hover:border-none duration-300" 
         :class="isActive?'bg-[#214bf6] text-white border-none':'border-[#939393] text-[#3d3c3c] border'"
         @click.prevent="emits('clicked',title)"
         >{{ isActive?'selected':'Select package' }}</button>

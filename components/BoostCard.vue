@@ -13,7 +13,7 @@
 
         <div class="p-1 grid place-items-center mt-4 lg:mt-12">
            <button 
-            class="border border-white bg-transparent rounded-md py-2 px-2 md:px-8 text-sm font-semibold text-white hover:bg-white hover:text-[#214bf6] duration-300 self-center"
+            class="border border-white bg-transparent rounded-md p-3 md:px-8 text-sm font-semibold text-white hover:bg-white hover:text-[#214bf6] duration-300 self-center"
             >Jifunze Zaidi</button>
         </div>
     </div>

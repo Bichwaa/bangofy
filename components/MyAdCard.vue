@@ -38,19 +38,19 @@
 
               <div class="flex lg:flex-row lg:justify-end gap-4 p-1 justify-self-end mt-6">
                   <button 
-                    class="flex items-center gap-1 border border-[#214BF6] hover:bg-[#214BF6] group duration-300 py-2 px-4 rounded-md"
+                    class="flex items-center gap-1 border border-[#214BF6] hover:bg-[#214BF6] group duration-300 py-2 px-6 rounded-md"
                     >
                     <IconsPencilIcon class="w-4 h-4 text-[#214bf6] group-hover:text-white"/>
                     <span class="text-[#214BF6] group-hover:text-white text-xs">Edit</span>
                   </button>
                   <button 
-                    class="flex items-center gap-1 border border-[#214BF6] hover:bg-[#214BF6] group duration-300 py-2 px-4 rounded-md"
+                    class="flex items-center gap-1 border border-[#214BF6] hover:bg-[#214BF6] group duration-300 py-2 px-6 rounded-md"
                     >
                     <IconsPauseIcon class="w-4 h-4 text-[#214bf6] group-hover:text-white"/>
                     <span class="text-[#214BF6] group-hover:text-white text-xs">Disable</span>
                   </button>
                   <button 
-                    class="flex items-center gap-1 border border-[#E72E4A] hover:bg-[#E72E4A] group duration-300 py-2 px-4 rounded-md"
+                    class="flex items-center gap-1 border border-[#E72E4A] hover:bg-[#E72E4A] group duration-300 py-2 px-6 rounded-md"
                     >
                     <IconsBinIcon class="w-4 h-4 text-[#E72E4A] group-hover:text-white"/>
                     <span class="text-[#E72E4A] group-hover:text-white text-xs">Delete</span>
