@@ -1,10 +1,10 @@
 <template>
     <div>
       <div class="carou my-6">
-        <Carousel class="w-full ">
+        <Carousel :opts="{loop: true }"  class="w-full" :plugins="[Autoplay({delay:2000})]">
           <CarouselContent class="">
-            <CarouselItem v-for="i in 2" :key="i" class="flex place-content-center px-0">
-              <NuxtImg src="/img/LP_Banner.png" alt="banner" class="w-full"/>
+            <CarouselItem v-for="source,idx in sources" :key="idx" class="flex place-content-center px-0">
+              <NuxtImg :src="source" alt="banner" class="w-full"/>
             </CarouselItem>
           </CarouselContent>
         </Carousel>
@@ -57,8 +57,9 @@
 
   <script setup lang="ts">
   import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel'
+  import Autoplay from '../components/autoplay'
   
-
+  const sources = ref(['/img/LP_Banner_1.png', '/img/LP_Banner_2.png', '/img/LP_Banner.png'])
 
 
 </script>

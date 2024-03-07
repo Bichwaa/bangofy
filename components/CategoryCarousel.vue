@@ -9,7 +9,7 @@
                   image
                 </div> -->
                 <NuxtImg class="h-20 w-20"  :src="val.url"/>
-                <div class="grid place-items-center text-center text-sm font-medium">
+                <div class="grid place-items-center text-center my-4 font-medium">
                   {{ val.name }}
                 </div>
               </div>
@@ -28,7 +28,7 @@
                         image
                       </div> -->
                       <NuxtImg class=""  :src="val.url"/>
-                      <div class="grid place-items-center text-center text-sm font-medium">
+                      <div class="grid place-items-center text-center my-4 font-medium">
                         {{ val.name }}
                       </div>
                     </div>
