@@ -26,7 +26,7 @@
             <h3 class="font-medium text-2xl">
               Unataka kukuza mauzo, au unatafuta bidhaa fulani?
             </h3>
-            <div class="text-slate-500 lg:w-1/2">
+            <div class="text-grey lg:w-1/2">
               Introducing our revolutionary platform that empowers you to earn cash by selling items or find anything you desire—all in one convenient location. 
             </div>
 

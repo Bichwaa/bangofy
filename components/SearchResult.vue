@@ -19,10 +19,10 @@
                 <div class="flex flex-row justify-between p-1">
                     <div class="flex items-center p-0">
                         <IconsLocationIcon class="h-3 w-3" colour="#888b9b" />
-                        <span class="text-slate-500 text-xs">Dar-es-salaam</span>
+                        <span class="text-grey text-xs">Dar-es-salaam</span>
                     </div>
 
-                    <span class="text-slate-500 text-xs">
+                    <span class="text-grey text-xs">
                         1 week
                     </span>
                 </div>

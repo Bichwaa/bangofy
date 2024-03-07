@@ -32,6 +32,12 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+
+      colors: {
+        'primary': '#214BF6',
+        'grey' : '#B2B2B2',
+        'lightgrey': '#F5F6F7'
+      },
     },
   },
   plugins: [animate],

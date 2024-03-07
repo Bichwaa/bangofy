@@ -7,7 +7,7 @@
                     <span class="name font-medium">Named Nameless</span>
                     <IconsBadgeIcon class="w-4 h-4"/>
                 </div>
-                <span class="text-slate-400">Member since 2022</span>
+                <span class="text-grey">Member since 2022</span>
             </div>
         </div>
         <div class="flex gap-8 p-2 mb-4">

@@ -1,28 +1,28 @@
 <template>
     <div class="carou2 mt-12">
-        <Carousel :opts="{loop:true}" class="w-full ">
-          <CarouselContent class="flex">
+        <!-- <Carousel :opts="{loop:true}" class="w-full "> -->
+          <!-- <CarouselContent class="flex"> -->
             <!-- <transition-group name="slide-fade"> -->
-              <CarouselItem v-for="(val, i) in categoryNames" :key="i" class="mr-2 gap-2 basis-[31%] md:basis-[19%] lg:basis-[15%] xl:basis-[8%]">
-                <Card class="mx-1 border-0 shadow-none bg-[#E4E9FE] rounded-md p-1 w-[12vh] h-[12vh] flex items-center justify-center">
+              <div class="flex justify-between">
+                <Card v-for="(val, i) in categoryNames" :key="i" class="border-0 shadow-none bg-[#E4E9FE] rounded-md p-1 w-[12vh] h-[12vh] flex items-center justify-center">
                   <CardContent class="p-0 border-0 shadow-none">
                     <div class="flex flex-col items-center pt-1">
                       <!-- <div class="grid place-items-center bg-blue-600 rounded-md m-2 p-2">
                         image
                       </div> -->
-                      <NuxtImg class=""  :src="val.url"/>
+                      <NuxtImg class="h-20 w-20"  :src="val.url"/>
                       <div class="grid place-items-center text-center text-sm font-medium">
                         {{ val.name }}
                       </div>
                     </div>
                   </CardContent>
                 </Card>
-              </CarouselItem>
+              </div>
             <!-- </transition-group> -->
-          </CarouselContent>
+          <!-- </CarouselContent> -->
           <!-- <CarouselPrevious class="hidden lg:block" /> -->
           <!-- <CarouselNext class="hidden lg:block" /> -->
-        </Carousel>
+        <!-- </Carousel> -->
       </div>
 </template>
 

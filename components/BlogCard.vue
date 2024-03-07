@@ -13,19 +13,19 @@
             </h3>
 
             <div class="flex gap-2 items-center">
-                <span class="text-slate-500 text-sm font-medium">
+                <span class="text-grey text-sm font-medium">
                 jan 17,2023
                 </span>
 
                 <span>/</span>
 
-                <span class="text-slate-500 text-sm font-medium">
+                <span class="text-grey text-sm font-medium">
                 By John Doe
                 </span>
 
                 <span>/</span>
 
-                <span class="text-slate-500 text-sm font-medium">
+                <span class="text-grey text-sm font-medium">
                 3 minute read
                 </span>
             </div>

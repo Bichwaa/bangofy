@@ -3,7 +3,7 @@
     <div class="drpdwn mb-3">
           <DropdownMenu>
               <DropdownMenuTrigger>
-                  <div class="flex gap-8 justifly-between items-center border border-[#D0D4DC] bg-[#F5F6F7] p-2">
+                  <div class="flex gap-8 justifly-between items-center border border-grey bg-lightgrey p-2">
                       <span>
                           {{ sortTitle }}
                       </span>
@@ -30,12 +30,12 @@
                 <span class="font-medium text-lg">Christian Tavares</span>
                 <IconsVerifiedIcon class="w-5 h-5 font-semibold" current-color="green"/>
               </div>
-              <span class="text-xs text-gray-400">Member since 2022</span>
+              <span class="text-xs text-grey">Member since 2022</span>
             </div>
           </div>
         </div>
         <div>
-          <button class="text-gray-400 text-sm font-medium border border-[#26262654] py-2 px-4 rounded-lg transition-all duration-300 hover:border-none hover:text-white hover:bg-[#214BF6]">
+          <button class="text-grey text-sm font-medium border border-[#26262654] py-2 px-4 rounded-lg transition-all duration-300 hover:border-none hover:text-white hover:bg-[#214BF6]">
             Edit
         </button>
         </div>
@@ -45,16 +45,16 @@
 
       <div class="flex gap-2 lg:gap-8 flex-wrap">
         <div class="flex gap-2">
-          <IconsLocationIcon class="w-4 h-4" colour="#26262635"/>
-          <span class="text-[#808080] text-xs font-medium">Mbeya</span>
+          <IconsLocationIcon class="w-4 h-4" colour="#B2B2B2"/>
+          <span class="text-grey text-xs font-medium">Mbeya</span>
         </div>
         <div class="flex gap-2">
-          <IconsLocationIcon class="w-4 h-4" colour="#26262635"/>
-          <span class="text-[#808080] text-xs font-medium">christiantavares@gmail.com</span>
+          <IconsLocationIcon class="w-4 h-4" colour="#B2B2B2"/>
+          <span class="text-grey text-xs font-medium">christiantavares@gmail.com</span>
         </div>
         <div class="flex gap-2">
-          <IconsPhoneIcon class="w-4 h-4" :current-color="'#26262635'"/>
-          <span class="text-[#808080] text-xs font-medium">0791293847</span>
+          <IconsPhoneIcon class="w-4 h-4" :current-color="'#B2B2B2'"/>
+          <span class="text-grey text-xs font-medium">0791293847</span>
         </div>
       </div>
     </div>

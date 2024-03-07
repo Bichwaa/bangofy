@@ -7,15 +7,15 @@
             </p>
         </div>
         <ul class="list-disc px-6">
-            <li class="text-slate-500 ">
+            <li class="text-grey ">
                 Do not make payments before checking what is being advertised.
             </li>
             
-            <li class="text-slate-500 ">
+            <li class="text-grey ">
                 Be aware of excess facilities and prices below the market.
             </li>
 
-            <li class="text-slate-500 ">
+            <li class="text-grey ">
                 If you are letting go, clean not only your hands but also the product and leave it well wrapped.
             </li>
         </ul>

@@ -45,7 +45,7 @@
       <div class="grid grid-cols-12 gap-2 items-center">
         <div class="col-span-12 md:col-span-6 flex flex-col my-1">
           <label for="firstname" class="font-medium pl-1 text-xs mb-1">Main category</label>
-          <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-white rounded-md lg:h-8 w-full text-xs py-1 px-2 text-gray-700">
+          <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-white rounded-md lg:h-8 w-full text-xs py-1 px-2 text-grey">
             <option value="one" class="text-xs  bg-slate-100">category 1</option>
             <option value="two" class="text-xs  bg-slate-100">category 2</option>
             <option value="three" class="text-xs  bg-slate-100">category 3</option>
@@ -55,7 +55,7 @@
 
         <div class="col-span-12 md:col-span-6 flex flex-col my-1">
           <label for="firstname" class="font-medium pl-1 text-xs mb-1">Subcategory</label>
-          <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-transparent rounded-md lg:h-8 w-full text-xs py-1 px-2 text-gray-700">
+          <select name="cars" id="cars" class=" border border-1 border-[#939393] bg-transparent rounded-md lg:h-8 w-full text-xs py-1 px-2 text-grey">
             <option value="one" class="text-xs  bg-slate-100">subcategory 1</option>
             <option value="two" class="text-xs  bg-slate-100">subcategory 2</option>
             <option value="three" class="text-xs  bg-slate-100">subcategory 3</option>
