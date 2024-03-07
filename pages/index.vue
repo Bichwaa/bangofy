@@ -15,13 +15,13 @@
       <h2 class="mt-12 mb-4 text-2xl font-medium px-4">Sponsored Ads</h2>
       <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 px-4 pb-8">
         <!-- <transition-group name="slide-fade"> -->
-          <AdCard v-for="i in 9" :key="i" :sponsored="true"/>
+          <AdCard v-for="i in 11" :key="i" :sponsored="true"/>
         <!-- </transition-group> -->
         <BoostCard/>
       </div>
 
       <!-- add space  -->
-      <div class="flex flex-col-reverse lg:flex-row lg:mx-auto lg:pl-20 px-4">
+      <!-- <div class="flex flex-col-reverse lg:flex-row lg:mx-auto lg:pl-20 px-4">
           <div class="manenoz flex flex-col lg:basis-1/2">
             <h3 class="font-medium text-2xl">
               Unataka kukuza mauzo, au unatafuta bidhaa fulani?
@@ -37,7 +37,7 @@
           <div class="picha grid place-items-center">
             <NuxtImg src="/img/tangazo.png" class="lg:w-[500px]"/>
           </div>
-      </div>
+      </div> -->
 
       <h2 class="mt-12 mb-4 text-2xl font-medium px-4">Latest Ads</h2>
       <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-4 px-4 pb-8">
@@ -49,7 +49,7 @@
       <h2 class="mt-12 mb-4 text-2xl font-medium px-4">Blog Posts</h2>
       <div class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4 px-4 pb-8">
         <!-- <transition-group name="slide-fade"> -->
-          <BlogCard v-for="i in 5" :key="i"/>
+          <BlogCard v-for="i in 4" :key="i"/>
         <!-- </transition-group> -->
       </div>
     </div>

@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     pageTransition: { name: 'page', mode: 'out-in' }
   },
   build: {
-    transpile: ['string-width', 'wide-align', 'shadcn-nuxt']
+    transpile: ['string-width', 'wide-align', 'shadcn-nuxt'],
   },
   // alias: {
   //   'wide-align': '/wide-align/align.cjs.js'
@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss','@pinia/nuxt','@nuxt/image',
     'vue3-carousel-nuxt','shadcn-nuxt','@vueuse/nuxt',
+    "@nuxtjs/google-fonts",
   ],
   shadcn: {
     /**
@@ -31,6 +32,14 @@ export default defineNuxtConfig({
      * @default "@/components/ui"
      */
     componentDir: './components/ui'
+  },
+  googleFonts: {
+    display: "swap",
+    families: {
+      'DM+Sans': {
+        wght: [400, 500, 600, 700],
+      },
+    },
   },
   carousel: {
     prefix: 'MyPrefix'
