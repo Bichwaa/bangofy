@@ -10,7 +10,7 @@
         </div> 
         <div class="flex gap-2 justify-between lg:justify-around">
             <div class="flex flex-col lg:flex-row items-center">
-                <divx class="my-1">Posted:</divx> 
+                <div class="my-1">Posted:</div> 
                 <span class="text-grey">3/03/2022</span>
             </div>
             <div class="flex flex-col lg:flex-row items-center gap-2">

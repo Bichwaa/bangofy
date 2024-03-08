@@ -36,6 +36,7 @@ module.exports = {
       colors: {
         'primary': '#214BF6',
         'grey' : '#B2B2B2',
+        "greytext":"#959596",
         'lightgrey': '#F5F6F7'
       },
     },

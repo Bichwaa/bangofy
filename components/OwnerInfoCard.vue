@@ -13,7 +13,7 @@
         <div class="flex gap-8 p-2 mb-4">
             <div class="flex gap-6 items-center border border-grey rounded-lg py-2 px-6">
                 <IconsPhoneIcon class="w-5 h-5" currentColor="#9ca3af"/>
-                <p class="text-grey">0721345435</p>
+                <p class="text-greytext">0721345435</p>
             </div>
 
             <button class="rounded-md bg-blue-700 py-2 px-6 text-white">Call</button>

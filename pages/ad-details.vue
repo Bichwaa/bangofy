@@ -8,7 +8,7 @@
         </div>
         </div>
         <div class="lg:grid lg:grid-cols-12">
-            <ItemInfoCard class="lg:col-span-8"/>
+            <!-- <ItemInfoCard class="lg:col-span-8"/> -->
         </div>
         <div class="flex flex-col md:flex-row items-center gap-3 lg:hidden">
             <OwnerInfoCard/>
@@ -16,3 +16,12 @@
         </div>
     </div>
 </template>
+
+<script setup>
+definePageMeta
+({
+  layout
+: 'close-packed-header'
+})
+
+</script>
