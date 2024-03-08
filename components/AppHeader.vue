@@ -11,7 +11,7 @@
         
         <div class="flex gap-24 w-9/12">
           <nuxt-link to="/" class=" text-red-400">
-          <NuxtImg :src="'/img/bangofy-logo.svg'" class="h-[6vh]"/>
+          <NuxtImg :src="'/img/bangofy-logo.svg'" class="h-[4vh]"/>
         </nuxt-link>
 
         <SearchBar class="hidden lg:flex w-8/12" />
