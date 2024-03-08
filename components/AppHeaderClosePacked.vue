@@ -6,12 +6,12 @@
       >
         <SideBar @close="openMenu=false" class="bg-white"/>
     </div>
-    <div class="flex lg:justify-between p-3 lg:px-72 gap-20 lg:gap-6 shadow-sm">
+    <div class="flex lg:justify-between p-3 lg:px-72 gap-20 lg:gap-6 shadow-sm border border-b border-slate-300 mb-12">
         <IconsMenuIcon class="w-6 h-6 cursor-pointer lg:hidden" @click="openMenu=true"/>
         
         <div class="flex gap-24">
           <nuxt-link to="/" class=" text-red-400">
-          <NuxtImg :src="'/img/bangofy-logo.svg'" />
+          <NuxtImg :src="'/img/bangofy-logo.svg'" class="h-[6vh]"/>
         </nuxt-link>
 
         <SearchBar class="hidden lg:flex w-8/12" />
