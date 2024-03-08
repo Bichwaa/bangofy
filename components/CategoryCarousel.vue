@@ -1,8 +1,8 @@
 <template>
     <div class="carou2 mt-12">
       <!-- ON LARGE DEVICES ONLY -->
-        <div class="hidden lg:flex justify-between ">
-          <Card v-for="(val, i) in categoryNames" :key="i" class="border-0 shadow-none bg-[#E4E9FE] rounded-md p-6 w-[14vh] h-[14vh] flex items-center justify-center cursor-pointer">
+        <div class="hidden lg:flex gap-8 ">
+          <Card v-for="(val, i) in categoryNames" :key="i" class="border-0 shadow-none bg-[#E4E9FE] mx-0 rounded-md w-[14vh] h-[14vh] flex items-center justify-center cursor-pointer">
             <CardContent class="p-0 border-0 shadow-none">
               <div class="flex flex-col items-center">
                 <!-- <div class="grid place-items-center bg-blue-600 rounded-md m-2 p-2">
